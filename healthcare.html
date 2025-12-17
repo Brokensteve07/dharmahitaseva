@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmahitha Seva Charitable Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #001F3F;
+            --orange: #FF851B;
+        }
+        .bg-navy { background-color: var(--navy); }
+        .text-navy { color: var(--navy); }
+        .bg-orange { background-color: var(--orange); }
+        .text-orange { color: var(--orange); }
+        .border-orange { border-color: var(--orange); }
+        
+        /* Dropdown Logic */
+        .dropdown:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
+        .dropdown-menu { display: none; position: absolute; background: white; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-top: 3px solid var(--orange); z-index: 50; }
+        .dropdown-menu a { color: var(--navy); padding: 12px 16px; display: block; text-decoration: none; border-bottom: 1px solid #eee; }
+        .dropdown-menu a:hover { background-color: #f8f9fa; color: var(--orange); }
+        
+        /* Custom Keyframes for Entrance */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <div class="bg-navy text-white py-2 px-6 md:px-20 flex flex-col md:flex-row justify-between text-sm">
+        <div class="flex gap-4">
+            <span><i class="fas fa-phone mr-1 text-orange"></i> +91 7760077380 / +91 9177711882</span>
+        </div>
+        <div class="hidden md:block">
+            <i class="fas fa-envelope mr-1 text-orange"></i> info@dharmahitha.org
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 hover:scale-105 transition-transform">
+            <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                <img src="WhatsApp Image 2025-12-17 at 7.39.12 PM.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <div class="leading-tight">
+                <span class="block font-bold text-xl text-navy">DHARMAHITHA</span>
+                <span class="block text-xs tracking-widest text-orange uppercase font-semibold">Seva Charitable Trust</span>
+            </div>
+        </div>
+        
+        <ul class="hidden lg:flex gap-8 font-semibold items-center">
+            <li><a href="HOME.html" class="hover:text-orange transition border-b-2 border-transparent hover:border-orange">Home</a></li>
+            <li class="dropdown relative py-4">
+                <a href="#" class="hover:text-orange transition">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="ABOUTUS.html">About Dharmahitha</a>
+                    <a href="members.html">Committee Members</a>
+                </div>
+            </li>
+            <li class="dropdown relative py-4">
+                <a href="#" class="hover:text-orange transition">Services <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="education.html">Education</a>
+                    <a href="healthcare.html">Healthcare</a>
+                    <a href="seva.html">Seva</a>
+                </div>
+            </li>
+            <li><a href="environment.html" class="hover:text-orange transition">Environment Safety</a></li>
+            <li class="dropdown relative py-4">
+                <a href="gallery.html" class="hover:text-orange transition">Gallery <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="gallery.html">Photo Gallery</a>
+                    <a href="gallery.html">Video Gallery</a>
+                </div>
+            </li>
+            <li><a href="Testimonials.html" class="hover:text-orange transition">Testimonials</a></li>
+            <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
+            <li><a href="donations.html" class="bg-orange text-white px-6 py-2 rounded shadow hover:bg-navy hover:-translate-y-1 transition duration-300">Donations</a></li>
+        </ul>
+    </nav>
+
+    <section class="relative h-[40vh] flex items-center bg-navy overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1505751172107-59d00a04430a?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20 scale-110 grayscale"></div>
+        <div class="relative z-10 px-6 md:px-20 text-white reveal active">
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">Healthcare</h1>
+            <div class="flex items-center gap-3 text-orange font-bold uppercase tracking-[0.3em] text-[10px]">
+                <a href="index.html" class="text-white">Home</a> <i class="fas fa-circle text-[4px]"></i> <span>Services</span> <i class="fas fa-circle text-[4px]"></i> <span>Healthcare</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <h4 class="text-orange font-black uppercase tracking-widest text-xs mb-4 flex items-center gap-3">
+                    <span class="w-10 h-0.5 bg-orange"></span> Holistic Well-being
+                </h4>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-8 leading-tight">
+                    The body is the primary <br><span class="text-orange italic">instrument for fulfilling one's purpose.</span>
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-10 text-sm">
+                    A healthy body and mind are essential for every individual to live with dignity and fulfill their purpose in life. With this belief, our health initiatives focus on providing affordable and accessible medical support to those who need it most. We organize health camps, assist with critical treatments, and spread awareness about preventive healthcare — because caring for health is not just a responsibility, but a sacred service to humanity.
+                </p>
+                
+                <div class="grid gap-6">
+                    <div class="flex gap-4 group">
+                        <div class="w-12 h-12 bg-orange/10 rounded-lg flex-shrink-0 flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-navy">Rural Medical Camps</h5>
+                            <p class="text-xs text-gray-500 mt-1">Free medical check-up camps in rural and underserved communities.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 group">
+                        <div class="w-12 h-12 bg-orange/10 rounded-lg flex-shrink-0 flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-navy">Life-saving Assistance</h5>
+                            <p class="text-xs text-gray-500 mt-1">Financial assistance for surgeries and essential medical treatments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal delay-200">
+                <div class="relative p-4">
+                    <div class="absolute inset-0 bg-orange/10 rounded-3xl rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80" class="relative rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition duration-1000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50 px-6 md:px-20">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 reveal">
+            <div class="flex gap-4 items-start">
+                <i class="fas fa-check-circle text-orange mt-1"></i>
+                <p class="text-sm text-navy font-semibold">Ayurveda and wellness workshops promoting holistic physical and mental well-being</p>
+            </div>
+            <div class="flex gap-4 items-start">
+                <i class="fas fa-check-circle text-orange mt-1"></i>
+                <p class="text-sm text-navy font-semibold">Health and hygiene awareness drives to prevent illness and support healthy living</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 md:px-20 py-10">
+    <div class="max-w-6xl mx-auto bg-orange rounded-[3rem] p-12 md:p-20 text-center text-white shadow-2xl reveal">
+        <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+            Be the Help Someone <br>Needs Today.
+        </h2>
+        <p class="text-white/90 max-w-2xl mx-auto mb-12 text-lg font-medium">
+            Every act of kindness has the power to change a life. When we step forward to support those in need, we become a ray of hope in someone's darkest moment.
+        </p>
+        
+        <a href="donations.html" class="bg-white text-orange px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-navy hover:text-white transition transform hover:scale-110 shadow-xl inline-block">
+            Donate Now
+        </a>
+    </div>
+    </section>
+
+    <footer class="bg-navy text-white pt-24 pb-12 px-6 md:px-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-16 border-b border-white/5 pb-16">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 bg-orange rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg">D</div>
+                    <div>
+                        <span class="block font-extrabold text-xl tracking-tight">DHARMAHITHA</span>
+                        <span class="block text-[10px] tracking-[0.2em] text-orange uppercase font-black">Seva Charitable Trust</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-10 italic">"Transforming lives with compassion and faith. We see service as worship and devotion."</p>
+                <div class="text-sm">
+                    <p class="text-orange font-bold text-[10px] uppercase tracking-widest mb-1">Call us anytime</p>
+                    <p class="text-2xl font-black">+91 77600 77380</p>
+                    <p class="text-2xl font-black">+91 91777 11882</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-orange font-bold text-xs uppercase tracking-widest mb-10">Quick Navigation</h4>
+                <ul class="space-y-4 text-[11px] font-black uppercase tracking-widest text-gray-300">
+                    <li><a href="HOME.html" class="hover:text-orange transition">Home</a></li>
+                    <li><a href="ABOUTUS.html" class="hover:text-orange transition">About Us</a></li>
+                    <li><a href="education.html" class="text-orange transition">Services</a></li>
+                    <li><a href="environment.html" class="hover:text-orange transition">Environment Safety</a></li>
+                    <li><a href="gallery.html" class="hover:text-orange transition">Gallery</a></li>
+                    <li><a href="Testimonials.html" class="hover:text-orange transition">Testimonials</a></li>
+                    <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
+                    <li><a href="donations.html" class="hover:text-orange transition">Donations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-orange font-bold text-xs uppercase tracking-widest mb-10">Office Address</h4>
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">H.No. 1-9-34/208, S.R. Apartment,<br>Ravindra Nagar, Habsiguda, Hyderabad,<br>Telangana - 500 007</p>
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center hover:bg-orange transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center hover:bg-orange transition-all"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-10 text-center mt-12 text-[10px] text-gray-600 font-bold uppercase tracking-[0.4em]">© 2025 Dharmahitha Seva Charitable Trust. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

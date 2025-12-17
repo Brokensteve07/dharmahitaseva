@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmahitha Seva Charitable Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #001F3F;
+            --orange: #FF851B;
+        }
+        .bg-navy { background-color: var(--navy); }
+        .text-navy { color: var(--navy); }
+        .bg-orange { background-color: var(--orange); }
+        .text-orange { color: var(--orange); }
+        .border-orange { border-color: var(--orange); }
+        
+        /* Dropdown Logic */
+        .dropdown:hover .dropdown-menu { display: block; animation: fadeIn 0.3s ease; }
+        .dropdown-menu { display: none; position: absolute; background: white; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border-top: 3px solid var(--orange); z-index: 50; }
+        .dropdown-menu a { color: var(--navy); padding: 12px 16px; display: block; text-decoration: none; border-bottom: 1px solid #eee; }
+        .dropdown-menu a:hover { background-color: #f8f9fa; color: var(--orange); }
+        
+        /* Custom Keyframes for Entrance */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="bg-navy text-white py-2 px-6 md:px-20 flex flex-col md:flex-row justify-between text-sm">
+        <div class="flex gap-4">
+            <span><i class="fas fa-phone mr-1 text-orange"></i> +91 7760077380 / +91 9177711882</span>
+        </div>
+        <div class="hidden md:block">
+            <i class="fas fa-envelope mr-1 text-orange"></i> info@dharmahitha.org
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md px-6 md:px-20 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 hover:scale-105 transition-transform">
+            <div class="w-12 h-12 bg-orange rounded-full flex items-center justify-center overflow-hidden shadow-lg">
+                <img src="WhatsApp Image 2025-12-17 at 7.39.12 PM.jpeg" alt="Logo" class="w-full h-full object-cover">
+            </div>
+            <div class="leading-tight">
+                <span class="block font-bold text-xl text-navy">DHARMAHITHA</span>
+                <span class="block text-xs tracking-widest text-orange uppercase font-semibold">Seva Charitable Trust</span>
+            </div>
+        </div>
+        
+        <ul class="hidden lg:flex gap-8 font-semibold items-center">
+            <li><a href="HOME.html" class="hover:text-orange transition border-b-2 border-transparent hover:border-orange">Home</a></li>
+            <li class="dropdown relative py-4">
+                <a href="#" class="hover:text-orange transition">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="ABOUTUS.html">About Dharmahitha</a>
+                    <a href="members.html">Committee Members</a>
+                </div>
+            </li>
+            <li class="dropdown relative py-4">
+                <a href="#" class="hover:text-orange transition">Services <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="education.html">Education</a>
+                    <a href="healthcare.html">Healthcare</a>
+                    <a href="seva.html">Seva</a>
+                </div>
+            </li>
+            <li><a href="environment.html" class="hover:text-orange transition">Environment Safety</a></li>
+            <li class="dropdown relative py-4">
+                <a href="gallery.html" class="hover:text-orange transition">Gallery <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="gallery.html">Photo Gallery</a>
+                    <a href="gallery.html">Video Gallery</a>
+                </div>
+            </li>
+            <li><a href="Testimonials.html" class="hover:text-orange transition">Testimonials</a></li>
+            <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
+            <li><a href="donations.html" class="bg-orange text-white px-6 py-2 rounded shadow hover:bg-navy hover:-translate-y-1 transition duration-300">Donations</a></li>
+        </ul>
+    </nav>
+
+    <section class="relative h-[45vh] flex items-center bg-gray-200 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-[10s] hover:scale-105"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-navy/60 via-navy/20 to-transparent"></div>
+        
+        <div class="relative z-10 px-6 md:px-20 text-white reveal active">
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4 hero-text-shadow">Our <span class="text-orange">Team</span></h1>
+            <div class="flex items-center gap-3 text-orange font-bold uppercase tracking-[0.3em] text-[10px] hero-text-shadow bg-navy/40 inline-flex px-4 py-2 rounded-full">
+                <a href="index.html" class="text-white hover:text-orange">Home</a> <i class="fas fa-circle text-[4px]"></i> <span>Committee Members</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+            
+            <div class="bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 group hover:-translate-y-4 transition-all duration-500 reveal">
+                <div class="h-80 bg-gray-200 relative overflow-hidden">
+                    <img src="rayudu_ms.jpg" alt="RAYUDU MS" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+                
+                <div class="p-8 text-center relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-1.5 bg-orange rounded-full"></div>
+                    
+                    <h3 class="text-xl font-extrabold text-navy uppercase tracking-tight">RAYUDU MS</h3>
+                    <p class="text-orange font-black text-xs uppercase tracking-widest mt-1 mb-6">Committee Member</p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <p class="text-gray-500 text-sm font-semibold flex items-center justify-center gap-2">
+                            <i class="fas fa-briefcase text-orange/50"></i> Software Engineer
+                        </p>
+                    </div>
+                    
+                    <a href="#" target="_blank" class="w-14 h-14 rounded-2xl bg-gray-50 text-[#0077B5] inline-flex items-center justify-center hover:bg-navy hover:text-white transition-all shadow-md group-hover:rotate-6">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <footer class="bg-navy text-white pt-24 pb-12 px-6 md:px-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-3 gap-16 border-b border-white/5 pb-16">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 bg-orange rounded-xl flex items-center justify-center text-white font-black text-2xl shadow-lg">D</div>
+                    <div>
+                        <span class="block font-extrabold text-xl tracking-tight">DHARMAHITHA</span>
+                        <span class="block text-[10px] tracking-[0.2em] text-orange uppercase font-black">Seva Charitable Trust</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-10 italic">"Transforming lives with compassion and faith. We see service as worship and devotion."</p>
+                <div class="text-sm">
+                    <p class="text-orange font-bold text-[10px] uppercase tracking-widest mb-1">Call us anytime</p>
+                    <p class="text-2xl font-black">+91 77600 77380</p>
+                    <p class="text-2xl font-black">+91 91777 11882</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-orange font-bold text-xs uppercase tracking-widest mb-10">Quick Navigation</h4>
+                <ul class="space-y-4 text-[11px] font-black uppercase tracking-widest text-gray-300">
+                    <li><a href="HOME.html" class="hover:text-orange transition">Home</a></li>
+                    <li><a href="ABOUTUS.html" class="text-orange transition">About Us</a></li>
+                    <li><a href="education.html" class="hover:text-orange transition">Services</a></li>
+                    <li><a href="environment.html" class="hover:text-orange transition">Environment Safety</a></li>
+                    <li><a href="gallery.html" class="hover:text-orange transition">Gallery</a></li>
+                    <li><a href="Testimonials.html" class="hover:text-orange transition">Testimonials</a></li>
+                    <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
+                    <li><a href="donations.html" class="hover:text-orange transition">Donations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-orange font-bold text-xs uppercase tracking-widest mb-10">Office Address</h4>
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">H.No. 1-9-34/208, S.R. Apartment,<br>Ravindra Nagar, Habsiguda, Hyderabad,<br>Telangana - 500 007</p>
+                <div class="flex gap-4 mt-8">
+                    <a href="#" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center hover:bg-orange transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center hover:bg-orange transition-all"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-10 text-center mt-12 text-[10px] text-gray-600 font-bold uppercase tracking-[0.4em]">© 2025 Dharmahitha Seva Charitable Trust. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
