@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --navy: #001F3F;
+            --navy: #010101;
             --orange: #FF851B;
         }
         .bg-navy { background-color: var(--navy); }
@@ -60,6 +60,10 @@
                 <span class="block text-xs tracking-widest text-orange uppercase font-semibold">Seva Charitable Trust</span>
             </div>
         </div>
+
+        <button id="menu-btn" class="lg:hidden text-navy focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+        </button>
         
         <ul class="hidden lg:flex gap-8 font-semibold items-center">
             <li><a href="index.html" class="hover:text-orange transition border-b-2 border-transparent hover:border-orange">Home</a></li>
@@ -90,9 +94,50 @@
             <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
             <li><a href="donations.html" class="bg-orange text-white px-6 py-2 rounded shadow hover:bg-navy hover:-translate-y-1 transition duration-300">Donations</a></li>
         </ul>
-    </nav>
 
-    <section id="home" class="relative h-[80vh] flex items-center bg-gray-900 overflow-hidden">
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 w-3/4 sm:w-1/2 bg-orange z-[100] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl lg:hidden">
+    <div class="flex justify-end p-6">
+        <button id="close-btn" class="text-white text-3xl focus:outline-none">&times;</button>
+    </div>
+
+    <div class="flex flex-col font-bold text-white overflow-y-auto">
+        <a href="index.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Home</a>
+
+        <div>
+            <button id="about-toggle" class="w-full px-8 py-4 border-b border-white/20 flex justify-between items-center hover:bg-black/10 focus:outline-none">
+                <span>About Us</span>
+                <i id="about-icon" class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="about-submenu" class="hidden bg-black/10 flex flex-col font-medium text-sm">
+                <a href="ABOUTUS.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">About Dharmahitha</a>
+                <a href="members.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Committee Members</a>
+            </div>
+        </div>
+
+        <div>
+            <button id="services-toggle" class="w-full px-8 py-4 border-b border-white/20 flex justify-between items-center hover:bg-black/10 focus:outline-none">
+                <span>Services</span>
+                <i id="services-icon" class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="services-submenu" class="hidden bg-black/10 flex flex-col font-medium text-sm">
+                <a href="education.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Education</a>
+                <a href="healthcare.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Healthcare</a>
+                <a href="seva.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Seva</a>
+            </div>
+        </div>
+
+        <a href="environment.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Environment Safety</a>
+        <a href="gallery.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Gallery</a>
+        <a href="Testimonials.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Testimonials</a>
+        <a href="contactus.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Contact Us</a>
+        <a href="donations.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Donations</a>
+    </div>
+</div>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden z-[90] lg:hidden"></div>
+</nav>
+
+    <section id="home" class="relative h-[85vh] flex items-center bg-gray-900 overflow-hidden">
         <div class="absolute inset-0 opacity-60">
             <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2070" class="w-full h-full object-cover scale-110 animate-[pulse_10s_infinite]">
         </div>
@@ -112,9 +157,9 @@
     <section id="about" class="py-20 px-6 md:px-20 grid md:grid-cols-2 gap-12 items-center bg-white">
         <div>
             <h4 class="text-orange font-bold uppercase tracking-widest text-sm mb-2">About Us</h4>
-            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">Building futures, one step at a time. <span class="text-orange">Celebrating the wonder</span> of childhood.</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">Building futures, one step at a time.<span class="text-orange">Celebrating the wonder</span> of childhood. Unlocking creativity with big dreams</h2>
             <p class="text-gray-600 mb-6 leading-relaxed">
-                Dharmahitha Seva Charitable Trust is a non-profit organization registered under the Indian Trusts Act, 1882.
+                Dharmahitha Seva Charitable Trust is a non-profit organization registered under the Indian Trusts Act, 1882. Established in [Year of Establishment, e.g., 2015] in Bengaluru, Karnataka, the Trust was founded on the belief that true service (Seva) is a righteous duty (Dharma) towards both humanity and the planet.
             </p>
             <a href="ABOUTUS.html" class="bg-orange text-white px-6 py-3 rounded font-semibold inline-block hover:scale-105 transition shadow">More Details</a>
         </div>
@@ -122,22 +167,22 @@
             <div class="p-6 border rounded-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-gray-100 bg-white group">
                 <i class="fas fa-book-reader text-orange text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
                 <h3 class="font-bold text-navy mb-2">Education</h3>
-                <p class="text-xs text-gray-500">Empowering underprivileged children through holistic education.</p>
+                <p class="text-xs text-gray-500">To empower underprivileged children and communities through holistic education and skill development.</p>
             </div>
             <div class="p-6 border rounded-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-gray-100 bg-white group">
                 <i class="fas fa-hand-holding-heart text-orange text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
                 <h3 class="font-bold text-navy mb-2">Seva</h3>
-                <p class="text-xs text-gray-500">Critical support to uplift marginalized sections.</p>
+                <p class="text-xs text-gray-500">To offer critical support and rehabilitation services to uplift the marginalized and vulnerable sections of society</p>
             </div>
             <div class="p-6 border rounded-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-gray-100 bg-white group">
                 <i class="fas fa-hospital text-orange text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
                 <h3 class="font-bold text-navy mb-2">Healthcare</h3>
-                <p class="text-xs text-gray-500">Regular health check-up camps and eye camps.</p>
+                <p class="text-xs text-gray-500">Organizing regular free health check-up camps, eye camps, and dental camps in partnership with</p>
             </div>
             <div class="p-6 border rounded-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-gray-100 bg-white group">
                 <i class="fas fa-leaf text-orange text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
                 <h3 class="font-bold text-navy mb-2">Environment</h3>
-                <p class="text-xs text-gray-500">Tree plantation drives and green initiatives.</p>
+                <p class="text-xs text-gray-500">Tree plantation drives, adoption programs, and initiatives to increase green cover in urban and rural areas</p>
             </div>
         </div>
     </section>
@@ -145,6 +190,9 @@
     <section id="services" class="bg-gray-50 py-16 px-6 md:px-20 text-center">
         <h4 class="text-orange font-bold uppercase tracking-widest text-sm mb-2">Charity Services</h4>
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-12">Exploring possibilities igniting passions</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+                To build an equitable society where every individual has access to basic necessities, quality education, and opportunities for growth, enabling them to lead a life of dignity and purpose.
+            </p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <a href="healthcare.html" class="block">
             <div class="relative h-80 rounded-xl overflow-hidden group cursor-pointer shadow-xl">
@@ -153,7 +201,7 @@
                 <div class="absolute inset-0 bg-navy opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div class="absolute bottom-6 left-6 text-left text-white transform group-hover:-translate-y-2 transition-transform duration-500">
                     <h3 class="font-bold text-xl">Healthcare</h3>
-                    <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity delay-100">Caring for the community.</p>
+                    <p class="text-xs opacity-60 group-hover:opacity-100 transition-opacity delay-100">A healthy body and mind are essential for an individual to pursue their life's purpose (Dharma).</p>
                 </div>
             </div>
             </a>
@@ -164,7 +212,7 @@
                 <div class="absolute inset-0 bg-navy opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div class="absolute bottom-6 left-6 text-left text-white transform group-hover:-translate-y-2 transition-transform duration-500">
                     <h3 class="font-bold text-xl">Education</h3>
-                    <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity delay-100">Learning for life.</p>
+                    <p class="text-xs opacity-60 group-hover:opacity-100 transition-opacity delay-100">We believe education is the foundation of a virtuous life and a strong society.</p>
                 </div>
             </div>
             </a>
@@ -175,7 +223,7 @@
                 <div class="absolute inset-0 bg-navy opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div class="absolute bottom-6 left-6 text-left text-white transform group-hover:-translate-y-2 transition-transform duration-500">
                     <h3 class="font-bold text-xl">Seva</h3>
-                    <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity delay-100">Selfless service.</p>
+                    <p class="text-xs opacity-60 group-hover:opacity-100 transition-opacity delay-100">Our Seva programs are the heart of our trust, embodying the spirit of selfless giving.</p>
                 </div>
             </div>
             </a>
@@ -186,7 +234,7 @@
                 <div class="absolute inset-0 bg-navy opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
                 <div class="absolute bottom-6 left-6 text-left text-white transform group-hover:-translate-y-2 transition-transform duration-500">
                     <h3 class="font-bold text-xl">Environment</h3>
-                    <p class="text-xs opacity-0 group-hover:opacity-100 transition-opacity delay-100">Protecting nature.</p>
+                    <p class="text-xs opacity-60 group-hover:opacity-100 transition-opacity delay-100">Honoring and protecting nature is an integral part of Hindu Dharma.</p>
                 </div>
             </div>
             </a>
@@ -263,6 +311,47 @@
         </div>
         <div class="relative z-10 text-center mt-12 text-[10px] text-gray-600 font-bold uppercase tracking-[0.4em]">© 2025 Dharmahitha Seva Charitable Trust. All Rights Reserved.</div>
     </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+    
+    // Toggle main sidebar
+    function toggleSidebar() {
+        mobileMenu.classList.toggle('translate-x-full');
+        overlay.classList.toggle('hidden');
+    }
 
+    menuBtn?.addEventListener('click', toggleSidebar);
+    closeBtn?.addEventListener('click', toggleSidebar);
+    overlay?.addEventListener('click', toggleSidebar);
+
+    // Dropdown Logic Helper
+    function setupDropdown(toggleId, menuId, iconId) {
+        const toggle = document.getElementById(toggleId);
+        const menu = document.getElementById(menuId);
+        const icon = document.getElementById(iconId);
+
+        toggle?.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    }
+
+    setupDropdown('about-toggle', 'about-submenu', 'about-icon');
+    setupDropdown('services-toggle', 'services-submenu', 'services-icon');
+
+    // Close on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
+        });
+    });
+});
+</script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --navy: #001F3F;
+            --navy: #010101;
             --orange: #FF851B;
         }
         .bg-navy { background-color: var(--navy); }
@@ -60,7 +60,11 @@
                 <span class="block text-xs tracking-widest text-orange uppercase font-semibold">Seva Charitable Trust</span>
             </div>
         </div>
-        
+         
+        <button id="menu-btn" class="lg:hidden text-navy focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+        </button>
+
         <ul class="hidden lg:flex gap-8 font-semibold items-center">
             <li><a href="index.html" class="hover:text-orange transition border-b-2 border-transparent hover:border-orange">Home</a></li>
             <li class="dropdown relative py-4">
@@ -90,6 +94,46 @@
             <li><a href="contactus.html" class="hover:text-orange transition">Contact Us</a></li>
             <li><a href="donations.html" class="bg-orange text-white px-6 py-2 rounded shadow hover:bg-navy hover:-translate-y-1 transition duration-300">Donations</a></li>
         </ul>
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 w-3/4 sm:w-1/2 bg-orange z-[100] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl lg:hidden">
+    <div class="flex justify-end p-6">
+        <button id="close-btn" class="text-white text-3xl focus:outline-none">&times;</button>
+    </div>
+
+    <div class="flex flex-col font-bold text-white overflow-y-auto">
+        <a href="index.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Home</a>
+
+        <div>
+            <button id="about-toggle" class="w-full px-8 py-4 border-b border-white/20 flex justify-between items-center hover:bg-black/10 focus:outline-none">
+                <span>About Us</span>
+                <i id="about-icon" class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="about-submenu" class="hidden bg-black/10 flex flex-col font-medium text-sm">
+                <a href="ABOUTUS.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">About Dharmahitha</a>
+                <a href="members.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Committee Members</a>
+            </div>
+        </div>
+
+        <div>
+            <button id="services-toggle" class="w-full px-8 py-4 border-b border-white/20 flex justify-between items-center hover:bg-black/10 focus:outline-none">
+                <span>Services</span>
+                <i id="services-icon" class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+            </button>
+            <div id="services-submenu" class="hidden bg-black/10 flex flex-col font-medium text-sm">
+                <a href="education.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Education</a>
+                <a href="healthcare.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Healthcare</a>
+                <a href="seva.html" class="px-12 py-3 border-b border-white/10 hover:bg-black/10">Seva</a>
+            </div>
+        </div>
+
+        <a href="environment.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Environment Safety</a>
+        <a href="gallery.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Gallery</a>
+        <a href="Testimonials.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Testimonials</a>
+        <a href="contactus.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Contact Us</a>
+        <a href="donations.html" class="px-8 py-4 border-b border-white/20 hover:bg-black/10">Donations</a>
+    </div>
+</div>
+
+<div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden z-[90] lg:hidden"></div>
     </nav>
 
     <section class="relative h-[45vh] flex items-center bg-navy overflow-hidden">
@@ -101,59 +145,86 @@
             </div>
         </div>
     </section>
+<section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
+    <div class="text-center mb-20 reveal">
+        <h4 class="text-orange-600 font-black uppercase tracking-[0.2em] text-xs mb-3">Prakruti Rakshati Rakshita</h4>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Healing Our Planet, <span class="text-orange-500 italic">Protecting Our Future</span>
+        </h2>
+        <div class="w-24 h-1 bg-orange-500 mx-auto mt-6 rounded-full"></div>
+    </div>
 
-    <section class="py-24 px-6 md:px-20 max-w-7xl mx-auto">
-        <div class="text-center mb-16 reveal">
-            <h4 class="text-orange font-black uppercase tracking-widest text-xs mb-2">Prakruti Rakshati Rakshita</h4>
-            <h2 class="text-4xl font-extrabold text-navy">Healing Our Planet, <span class="text-orange italic">Protecting Our Future</span></h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
-            <div class="env-card reveal flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg h-60">
-                    <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80fafa5?auto=format&fit=crop&q=80" alt="No Plastic" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-xl font-bold text-navy mb-3">No Plastic Usage <br><span class="text-orange text-sm font-semibold uppercase tracking-wider">Break Free from Plastic</span></h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Plastic is choking our planet. We are committed to a plastic-free India by promoting small, everyday swaps and sustainable alternatives.</p>
-                    <p class="text-orange font-bold text-xs italic">Refuse, Reuse, Recycle.</p>
-                </div>
+    <div class="grid grid-cols-1 gap-16 lg:gap-24">
+        
+        <div class="env-card reveal flex flex-col md:flex-row gap-8 lg:gap-12 items-center group">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl h-80">
+                <img src="img_20.jpg" 
+                     alt="No Plastic" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
             </div>
-
-            <div class="env-card reveal flex flex-col md:flex-row-reverse gap-6 items-center">
-                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg h-60">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80" alt="Tree Plantation" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full md:w-1/2 md:text-right">
-                    <h3 class="text-xl font-bold text-navy mb-3">Tree Plantation <br><span class="text-orange text-sm font-semibold uppercase tracking-wider">Plant a Tree, Grow a Legacy</span></h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Trees are the lungs of our world. Our mission is to bring life back to India's green cover through large-scale plantation drives.</p>
-                    <p class="text-orange font-bold text-xs italic">One Tree, One Life. Plant More.</p>
-                </div>
-            </div>
-
-            <div class="env-card reveal flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg h-60">
-                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80" alt="Battery Car" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h3 class="text-xl font-bold text-navy mb-3">Battery Car Usage <br><span class="text-orange text-sm font-semibold uppercase tracking-wider">Drive Green, Breathe Clean</span></h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Switching to battery cars (EVs) can drastically cut down toxic air pollution. Join the revolution for cleaner commutes.</p>
-                    <p class="text-orange font-bold text-xs italic">Go Electric. For Zero Emissions.</p>
-                </div>
-            </div>
-
-            <div class="env-card reveal flex flex-col md:flex-row-reverse gap-6 items-center">
-                <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-lg h-60">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80" alt="Nature Improvement" class="w-full h-full object-cover">
-                </div>
-                <div class="w-full md:w-1/2 md:text-right">
-                    <h3 class="text-xl font-bold text-navy mb-3">Nature Improvement <br><span class="text-orange text-sm font-semibold uppercase tracking-wider">Heal Our Planet</span></h3>
-                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Cleaning up our rivers and lakes, protecting wildlife, and promoting organic farming is a collective effort to heal the damage.</p>
-                    <p class="text-orange font-bold text-xs italic">Heal the Damage. Restore the Earth.</p>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">No Plastic Usage <br>
+                    <span class="text-orange-500 text-sm font-bold uppercase tracking-widest">Break Free from Plastic</span>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">Plastic is choking our planet. From our streets to our oceans, it's a problem we can see everywhere. We are committed to a plastic-free India by promoting simple, everyday swaps. Join us in saying 'no' to single-use plastics like bags, bottles, and straws. Choose reusable, sustainable alternatives and help us protect our land, wildlife, and health for generations to come.</p>
+                <div class="inline-block px-4 py-1 border-l-4 border-orange-500 bg-orange-50">
+                    <p class="text-orange-600 font-bold text-sm italic">Refuse, Reuse, Recycle.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="env-card reveal flex flex-col md:flex-row-reverse gap-8 lg:gap-12 items-center group">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl h-80">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800" 
+                     alt="Tree Plantation" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="w-full md:w-1/2 md:text-right">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Tree Plantation <br>
+                    <span class="text-orange-500 text-sm font-bold uppercase tracking-widest">Plant a Tree, Grow a Legacy</span>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">Trees are the lungs of our world. They give us clean air, fight climate change, and provide shelter for wildlife. Our mission is to bring life back to India's green cover through large-scale tree plantation drives. We don't just plant trees; we nurture them. We also offer services for communities and businesses to start their own green spaces, because every tree counts in building a healthier, happier India.</p>
+                <div class="inline-block px-4 py-1 md:border-r-4 md:border-l-0 border-l-4 border-orange-500 bg-orange-50">
+                    <p class="text-orange-600 font-bold text-sm italic">One Tree, One Life. Plant More.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="env-card reveal flex flex-col md:flex-row gap-8 lg:gap-12 items-center group">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl h-80">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800" 
+                     alt="Battery Car" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Battery Car Usage <br>
+                    <span class="text-orange-500 text-sm font-bold uppercase tracking-widest">Drive Green, Breathe Clean</span>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">The future of travel is clean, quiet, and electric! By switching to battery cars (EVs), we can drastically cut down the toxic air pollution from our cities. Electric vehicles are not just a global trend; they are India's key to clearer skies and a quieter, more sustainable future. Discover the benefits of EVs and join the revolution for cleaner commutes and a healthier nation.</p>
+                <div class="inline-block px-4 py-1 border-l-4 border-orange-500 bg-orange-50">
+                    <p class="text-orange-600 font-bold text-sm italic">Go Electric. For Zero Emissions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="env-card reveal flex flex-col md:flex-row-reverse gap-8 lg:gap-12 items-center group">
+            <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl h-80">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" 
+                     alt="Nature Improvement" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="w-full md:w-1/2 md:text-right">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Nature Improvement <br>
+                    <span class="text-orange-500 text-sm font-bold uppercase tracking-widest">Heal Our Planet</span>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed mb-6">Our well-being is directly connected to the health of our natural world. "Nature Improvement" is all about taking active steps to restore and protect our environment. This includes cleaning up our rivers and lakes, protecting wildlife, promoting organic farming, and conserving soil and water. It's a collective effort to heal the damage and ensure that India's incredible natural beauty thrives for our children.</p>
+                <div class="inline-block px-4 py-1 md:border-r-4 md:border-l-0 border-l-4 border-orange-500 bg-orange-50">
+                    <p class="text-orange-600 font-bold text-sm italic">Heal the Damage. Restore the Earth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="py-20 bg-gray-50 px-6 md:px-20">
         <div class="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -226,12 +297,84 @@
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
+    // 1. Tab Logic (For Education/Healthcare pages)
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.classList.add("active");
+    }
+
+    // 2. Scroll Animation Trigger
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // 3. Mobile Sidebar & Independent Sub-menu Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        // Main Sidebar Toggle function
+        function toggleSidebar() {
+            mobileMenu.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
+        if (closeBtn) closeBtn.addEventListener('click', toggleSidebar);
+        if (overlay) overlay.addEventListener('click', toggleSidebar);
+
+        /**
+         * Helper Function to handle multiple dropdowns (About and Services)
+         * to prevent ID conflicts.
+         */
+        function setupDropdown(toggleId, submenuId, iconId) {
+            const toggle = document.getElementById(toggleId);
+            const submenu = document.getElementById(submenuId);
+            const icon = document.getElementById(iconId);
+
+            if (toggle && submenu) {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    submenu.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            }
+        }
+
+        // Initialize mobile dropdowns
+        setupDropdown('about-toggle', 'about-submenu', 'about-icon');
+        setupDropdown('services-toggle', 'services-submenu', 'services-icon');
+
+        // Close sidebar when clicking links (but not the toggle buttons)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const isToggle = e.target.closest('#about-toggle') || e.target.closest('#services-toggle');
+                if (!isToggle) {
+                    mobileMenu.classList.add('translate-x-full');
+                    overlay.classList.add('hidden');
+                }
             });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+        });
+    });
+</script>
 </body>
 </html>
